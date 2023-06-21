@@ -1,0 +1,13 @@
+<?version="1.0"?>
+<!--语法-->
+<!--
+    <!ENTITY entity-name "entity-value">
+-->
+
+<!DOCTYPE author [
+    <!ENTITY writer "duck">
+    <!ENTITY copyright "2023">
+]>
+
+
+<author>&writer;</author>

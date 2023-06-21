@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<body>
+    <!-- 
+        js基本数据类型：
+            Boolean
+            String
+            Number  js 只有一种数字类型。数字可以带小数点，也可以不带：
+            Null
+            Undefined
+                Undefined 这个值表示变量不含有值。可以通过将变量的值设置为 null 来清空变量。
+            Symbol ES6引入，表示独一无二的值
+        js引用数据类型
+            Object对象
+            Array数组
+            Function函数
+            特殊对象
+                RegExp正则
+                Date日期
+
+        js创建数组
+            方式一：
+                var cars=new Array();
+                cars[0]="Saab";
+                cars[1]="Volvo";
+                cars[2]="BMW";
+            方式二（condensed array）：
+                var cars=new Array("Saab","Volvo","BMW");
+            方式三（literal array）：
+                var cars=["Saab","Volvo","BMW"];
+        
+        js对象 由花括号分隔。在括号内部，对象的属性以名称和值对的形式 (name : value) 来定义。属性由逗号分隔：
+            var person={firstname:"John", lastname:"Doe", id:5566};
+            空格和折行无关紧要。声明可横跨多行：
+                var person={
+                    firstname : "John",
+                    lastname  : "Doe",
+                    id        :  5566
+                };
+            对象属性有两种寻址方式：
+                name=person.lastname;
+                name=person["lastname"];
+        变量声明类型
+            当声明新的变量时，可以使用关键词“new”来声明其类型。
+                var carname=new String;
+                var x=      new Number;
+                var y=      new Boolean;
+                var cars=   new Array;
+                var person= new Object;
+        
+        JavaScript 变量均为对象。当您声明一个变量时，就创建了一个新的对象。
+     -->
+    <script>
+        typeof "john";
+        typeof 3.14;
+        typeof false;
+        typeof [1,2,3,4];
+        typeof {name:'john',age: 13};
+
+        // js数组
+        
+    </script>
+</body>
+</html>

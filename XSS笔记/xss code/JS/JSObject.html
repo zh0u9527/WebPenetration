@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<!-- 
+    js对象
+        JavaScript 对象是拥有属性和方法的数据。
+    对象定义
+        可以使用字符来定义和创建 JavaScript 对象:
+            var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+        
+        定义 JavaScript 对象可以跨越多行，空格跟换行不是必须的。
+    对象属性
+        可以说 "JavaScript 对象是变量的容器"。
+        但是，我们通常认为 "JavaScript 对象是键值对的容器"。
+        键值对通常写法为 name : value (键与值以冒号分割)。
+        键值对在 JavaScript 对象通常称为 对象属性。
+    	
+        JavaScript 对象是属性变量的容器。
+    访问对象属性
+        person.lastName;
+        person["lastName"];
+    对象方法
+        对象的方法定义了一个函数，并作为对象的属性存储。
+        对象方法通过添加 () 调用 (作为一个函数)。
+        该实例访问了 person 对象的 fullName() 方法:
+            var person = {
+                firstName: "John",
+                lastName : "Doe",
+                id : 5566,
+                fullName : function() 
+                {
+                    return this.firstName + " " + this.lastName;
+                }
+            };
+        name = person.fullName();
+        如果你要访问 person 对象的 fullName 属性，它将作为一个定义函数的字符串返回：
+        name = person.fullName;
+            返回：function() { return this.firstName + " " + this.lastName; }
+        
+        JavaScript 对象是属性和方法的容器。
+    访问对象方法
+        使用一下语法创建对象方法:
+            methodName: function(){
+                //code...
+            }
+        使用一下语法访问对象方法：
+            objectName.methodName()
+        通常 fullName() 是作为 person 对象的一个方法， fullName 是作为一个属性。
+        如果使用 fullName 属性，不添加 (), 它会返回函数的定义： 
+    
+    有多种方式可以创建，使用和修改 JavaScript 对象。
+    同样也有多种方式用来创建，使用和修改属性和方法。
+    -->
+    <script>
+
+    </script>
+</body>
+</html>

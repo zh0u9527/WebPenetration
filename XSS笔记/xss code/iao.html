@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="outer">
+        这是外层div标签
+        <div id="inner">
+            这是内层div标签
+            <a href="#" id="link">这是超链接</a>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div id="test-area" style="background-color: coral;">
+        
+    </div>
+</body>
+<script>
+    var inner = document.getElementById("inner");
+    var testArea = document.getElementById("test-area");
+    testArea.innerHTML = inner.outerHTML;
+</script>
+</html>
