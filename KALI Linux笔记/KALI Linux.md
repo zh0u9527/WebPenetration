@@ -1,6 +1,6 @@
 # 攻防思路讲解
 
-![image-20230430214329834](KALI Linux.assets/image-20230430214329834.png)
+![image-20230430214329834](./KALI Linux.assets/image-20230430214329834.png)
 
 -   信息收集
 -   漏洞扫描
@@ -512,7 +512,7 @@ websocket介绍，https://developer.mozilla.org/zh-CN/docs/Web/API/WebSockets_AP
 
 https://www.ruanyifeng.com/blog/2017/05/websocket.html
 
-![img](KALI Linux.assets/bg2017051502.png)
+![img](./KALI Linux.assets/bg2017051502.png)
 
 
 
@@ -577,7 +577,7 @@ Transfer-Encoding: chunked
 G
 ```
 
-![image-20230503175737314](KALI Linux.assets/image-20230503175737314.png)
+![image-20230503175737314](./KALI Linux.assets/image-20230503175737314.png)
 
 CL.TE的本质是代理服务器以Content-Length来识别请求体当中的有效数据，而后台源服务器却以Transfer-Encoding来识别请求体当中的有效数据。当代理服务器收到请求之后，会将第8行及以下的所有数据（Content-Length的长度所对应的数据）转发给源服务器，这时源服务器使用Transfer-Encoding来识别请求有效数据并使用`0`作为数据的分割符，即`0`后面的数据默认在当次请求当中被丢弃，放入下一次请求当中，当下一次请求来到时，再将剩余的数据拼接到请求里面，这里便形成了`HTTP请求走私`。
 
@@ -605,7 +605,7 @@ x=1
 
 ```
 
-![image-20230503181457311](KALI Linux.assets/image-20230503181457311.png)
+![image-20230503181457311](./KALI Linux.assets/image-20230503181457311.png)
 
 
 
