@@ -141,7 +141,7 @@ vagrant rdp   # 以rdp方式连接，默认密码也是vagrant/vagrant
 
 如果通过ssh或rdp无法连接box时，这是我们去存放虚拟机的路径下面手动的启动该虚拟机即可。
 
-![image-20230313155501402](.\Vagrant.assets\image-20230313155501402.png)
+![image-20230313155501402](./Vagrant.assets/image-20230313155501402.png)
 
 
 
@@ -151,7 +151,7 @@ vagrant rdp   # 以rdp方式连接，默认密码也是vagrant/vagrant
 
 ### vagrant Provisioning 
 
-![image-20230313162041470](.\Vagrant.assets\image-20230313162041470.png)
+![image-20230313162041470](./Vagrant.assets/image-20230313162041470.png)
 
 
 
@@ -190,7 +190,7 @@ vagrant up --provider=virtualbox
 config.vm.network "private_network", type: "dhcp"  # 给虚拟机添加了一张网卡，默认为仅主机模式
 ```
 
-![image-20230313230040523](.\Vagrant.assets\image-20230313230040523.png)
+![image-20230313230040523](./Vagrant.assets/image-20230313230040523.png)
 
 
 
