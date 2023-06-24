@@ -2,7 +2,7 @@
 
 ## 什么是XXE漏洞
 
-![image-20230402120450687](C:\Users\friendship\Desktop\MiscTools\Pentest_Interview\XXE笔记\XXE笔记.assets\image-20230402120450687.png)
+![image-20230402120450687](./XXE笔记\XXE笔记.assets/image-20230402120450687.png)
 
 其中，内网探测是比较比较极端的，因为它依赖于一些特定的插件；
 
@@ -63,7 +63,7 @@ https://www.runoob.com/dtd/dtd-tutorial.html
 
 当然也可以将dtd文件直接下载xml文件当中。
 
-![image-20230402121007748](C:\Users\friendship\Desktop\MiscTools\Pentest_Interview\XXE笔记\XXE笔记.assets\image-20230402121007748.png)
+![image-20230402121007748](./XXE笔记\XXE笔记.assets/image-20230402121007748.png)
 
 
 
@@ -185,7 +185,7 @@ DTD中属性的定义是这样的：
 
 ### 脚本默认支持的外部实体协议
 
-![image-20230402215316923](C:\Users\friendship\Desktop\MiscTools\Pentest_Interview\XXE笔记\XXE笔记.assets\image-20230402215316923.png)
+![image-20230402215316923](./XXE笔记\XXE笔记.assets/image-20230402215316923.png)
 
 注意：PHP中，libxml2.9以上的版本php默认不会解析外部的实体类。使用`echo LIBXML_DOTTED_VERSION;`来查看PHP libxml的版本；
 
@@ -270,9 +270,9 @@ xxe 由于可以访问外部 url，也就有类似 ssrf 的攻击效果，同样
 
 根据回显的结果不同来判断端口是否开放；
 
-![image-20230402173800378](C:\Users\friendship\Desktop\MiscTools\Pentest_Interview\XXE笔记\XXE笔记.assets\image-20230402173800378.png)
+![image-20230402173800378](./XXE笔记\XXE笔记.assets/image-20230402173800378.png)
 
-![image-20230402173818024](C:\Users\friendship\Desktop\MiscTools\Pentest_Interview\XXE笔记\XXE笔记.assets\image-20230402173818024.png)
+![image-20230402173818024](./XXE笔记\XXE笔记.assets/image-20230402173818024.png)
 
 
 
@@ -306,6 +306,6 @@ xxe 由于可以访问外部 url，也就有类似 ssrf 的攻击效果，同样
 
 该扩展不是默认安装的，安装后可通过expect://来执行任意的php命令；
 
-![image-20230402214028818](C:\Users\friendship\Desktop\MiscTools\Pentest_Interview\XXE笔记\XXE笔记.assets\image-20230402214028818.png)
+![image-20230402214028818](./XXE笔记\XXE笔记.assets/image-20230402214028818.png)
 
  
